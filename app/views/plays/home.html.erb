@@ -1,0 +1,10 @@
+<%= link_to "Game", plays_game_path %><br>
+<h2>Upload Images</h2>
+<%= form_for @play_images, url: { controller: 'plays', action: 'create_play_images'} do |f| %>
+  <fieldset>
+    <legend>Upload Images</legend>
+    <label>Choose Image files</label>
+    <%= f.file_field  :image, multiple: true, id: 'file-field' %><br>
+    <%= f.submit 'Upload', id: 'upload-button'%>
+  </fieldset>
+<% end %>
