@@ -1,0 +1,12 @@
+AllCops:
+  NewCops: enable
+  Exclude:
+    - 'bin/*'
+    - 'vendor/**/*'
+    - 'tmp/**/*'
+    - '.git/**/*'
+    - 'db/schema.rb'
+  TargetRubyVersion: 2.6.5
+
+Layout/LineLength:
+  Max: 120
