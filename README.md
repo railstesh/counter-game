@@ -14,3 +14,6 @@ Things you may want to cover:
 * Database initialization
   rails db:migrate
   rails db:seed
+
+* To run app thorugh Docker run 
+  `docker-compose up` command
