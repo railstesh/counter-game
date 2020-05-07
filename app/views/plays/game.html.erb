@@ -1,0 +1,21 @@
+<%= link_to "Home", plays_home_path %>
+<h1 id="timer"></h1>
+<img src="" id="image" style="height: 100px">
+
+<br><br>
+<button onclick="postPlays()">Click me</button>
+<br><br><br><br>
+
+<table id="plays" data-images='<%= raw @random_images.to_json %>'>
+<%= tag("div", id: "random-images",  data: @random_images) %>
+  <tr>
+    <th>Timer count</th>
+    <th>Image</th>
+  </tr>
+  <% @plays.each do |play| %>
+    <tr>
+      <td><%= play.timer_count %></td>
+      <td><img src="<%= play.image_url %>" style='height: 50px'></td>
+    </tr>
+  <% end %>
+</table>
